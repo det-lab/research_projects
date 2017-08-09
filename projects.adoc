@@ -1,0 +1,95 @@
+== to read tonight:
+phonon dispersion measurement w/ neutron scattering? https://journals.aps.org/prb/pdf/10.1103/PhysRevB.60.284
+
+
+Modeling matter
+---------------
+* electron/hole mobility in Ge and Si crystals
+* creation of free charges in Ge and Si crystals
+  -- electron-phonon coupling
+  -- recombination effects
+  
+
+Modeling matter: phonon-charge partitioning of energy
+-----------------------------------------------------
+Nader's paper says, "We are as-
+suming that at these low energies the sudden creation of
+lattice defects provides enough local perturbation in the
+electronic band structure to create an electron-hole pair
+excitation."
+
+Can we model this?  Can we measure this (does the Lindhard curve measure this)?  Sure, electron-hole recombination makes this messy.  Is there a simple way to start, though?  It'd be nice to compare to data and be able to put a limit on the size of additional effects.
+ 
+ * http://cmt.dur.ac.uk/sjc/thesis_prt/node56.html
+ * measuring phonon-exciton coupling with Raman spectroscopy: http://pubs.acs.org/doi/abs/10.1021/acs.jpclett.6b02944
+ * 2D electron-phonon coupling: https://journals.aps.org/prb/pdf/10.1103/PhysRevB.88.121403
+ * tunneling, phonon spectra: http://onlinelibrary.wiley.com/doi/10.1002/qua.560020734/abstract (M. Dresselhaus!)
+
+
+Modeling matter: charge trapping
+--------------------------------
+Do we really understand charge trapping?  I don't.  Can we improve our model?  How can we validate it?
+
+Wendi is working on predicting ??.  The Raman spectrum would also be useful.
+ * Raman spectroscopy of Ge: https://journals.aps.org/pr/pdf/10.1103/PhysRev.155.712
+ * more Raman spect of Ge: http://iopscience.iop.org/article/10.1088/0268-1242/31/10/105012/meta;jsessionid=DB1AED6ED6096034FB77189E1168B1C7.ip-10-40-1-105
+ * experimental how-to for measuring Raman: http://www.sciencedirect.com/science/article/pii/S0038109811000391?via%3Dihub#f000015
+
+Data: mobility/lifetime as a function of temperature.
+
+
+Modeling matter: softened Compton step
+--------------------------------------
+DAMIC sees a softened Compton step when looking at Compton scattering (https://arxiv.org/pdf/1706.06053.pdf) but not when looking at photoelectric-effect data (https://confluence.slac.stanford.edu/display/CDMS/Science+Meetings, Karthik).  The obvious physical difference is Compton: highish energy gamma in final state, photoelectric: no gamma in final state.
+
+Can we use DFT to understand why these scatters would look different?  Or, why we don't see the full energy for some Compton scatters?  If people use VASP to simulate lasers on germanium, can we use VASP to simulate this?  (Probably not directly comparable, Amy!  Lasers are steady-state while a single gamma is not.)
+
+
+Modeling matter: direction dependence
+-------------------------------------
+What do we expect our detectors to measure for a delta-function energy transfer E?  
+
+Well, what *direction* was that kick?  Energy transfers in different directions will partition that energy deposition between phonons and electrons differently.  Predict this, and provide code that generates the spectrum we expect to see in our HV and iZIP detectors for a given background.
+
+Damn, Nader already did the majority of this work: https://arxiv.org/pdf/1703.05371.pdf.  Can we measure this?  Is this effect large enough to explain the softened shoulder DAMIC sees on the Compton step?
+
+
+Modeling matter: atomic-scale Lindhard
+--------------------------------------
+We'd all love an atomic-scale theory of how energy deposition is partitioned into electron and phonon systems - but it's hard because the unit cell you'd have to use for DFT is way beyond what computers can do in a year.
+
+Some of the folks at LBNL and also England are making inroads by stitching together DFT methods with ... other, faster methods.  We should work with them, apply the methods to our detectors, and compare to measured calibration data!
+
+
+Modeling matter: first steps
+----------------------------
+Historically, when we imagine a dark matter particle interacting in our detector, we pretend like the nucleus is a free particle floating in a vacuum.  This is a really good approximation if the energy transfer is large (say, 1 keV) because the scale of atomic binding energy is on the order of 10 eV.  But the dark matter community wants more sensitive experiments and drives hard to look at smaller and smaller energy transfers (CDMS recently published a paper that looked at energy transfers as small as 56 eV).  And it turns out we don't really understand energy transfer at these low-energy scales.
+
+So that's exciting!
+
+As it turns out, chemists have been interested in understanding how atoms move for a very long time - protein folding is a classic example.  They combine an accurate description of the electric field of an atom with F = ma (or sometimes the quantum mechanical version of that) and ... watch how the atoms move.  Which is exactly what we'd like to do.
+
+The specific work I have in mind here is to adapt an instructional analysis on water to use the open-source NAMD code.  The downside is that this isn't immediately related to the CDMS dark matter search.  But it's a nice, finite project that gives you a chance to use electrostatics, electrodynamics, and quantum mechanics together to predict some properties of water.  And if you enjoy this work, an obvious second project is to do something similar but for germanium.
+
+
+Was that two hits or one?
+-------------------------
+Surprisingly, calibrating the energy scale of our detectors is a real challenge.  Lots of standard calibration sources emit gammas or betas and these predominantly interact with the *electrons* in our detectors.  But we expect dark matter to overwhelmingly interact with the *nuclei* in our detectors.  
+
+So ... what can we use to calibrate energy transfers to nuclei in our detectors?  Neutrons!
+
+Except that - unlike gammas - it's hard to get neutrons that are all exactly the same energy.  So then we tie ourselves into knots trying to figure out how to use neutrons to calibrate despite their uncooperative nature.
+
+I've actually got several projects related to this, but the one that immediately comes to mind is looking at some existing data to see if we can find a way to identify events where a neutron interacted in a detector many times, rather than only once.  (Low energy neutrons have a path length on the order of cm and tend to interact several times in our detectors, significanly complicating calibration analysis.)
+
+This analysis is likely to be really fun at first - you'd spend a lot of time looking directly at detector signals and thinking about the physics that creates them.  But identifying events with multiple interactions is not gauranteed to be possible.  So the result of this analysis could well be "it would be super awesome to be able to distinguish multiple-interaction events but I have conclusively shown that this is not possible with CDMS detectors".  
+
+If calibration sounds interesting to you but you're not keen on bitter disappointment, let me know and I can fill you in on some alternative calibration projects that, while not as signal-oriented as this one, aren't null-result territory.
+
+
+Miscellany
+----------
+* help fix unnecessary exclusion: make our detector-control software accessible to people with low or no vision
+* solve a problem that plagues the entire physics community: develop a prototype data reader and writer that needs only a user-supplied description of the data to read and write files
+* how we process the data now is fine but what if we could do it better!?: measure the speed of the algorithms we use to process CDMS data; adapt them for use on a GPU; explore the use of non-negative matrix factorization to improve our signal-to-noise radiation
+* Make it easier to process CDMS data: Develop a Nix expression that will install the version of ROOT needed by CDMS software.    

@@ -1,0 +1,18 @@
+= Hai Lin (CU Denver, Chemistry)
+Hai Lin focuses on simulating chemical reactions across multiple scales, from the atom to the cell.  His group is very interested in ions, and the mobility of ions.  They stitch together quantum mechanical methods and newtonian methods to accurately simulate reactions.
+
+His papers are split between developing molecular dynamics methods and applications.  Many of Hai Lin's papers compare theoretical results with experimental data.
+
+http://www.ucdenver.edu/faculty-staff/hlin/Pages/Research.aspx 
+
+
+= Xiaotai Wang (CU Denver, Chemistry)
+In his own words: We use computational methods to (1) design novel organometallic and coordination compounds and (2) study the mechanisms of important reactions, particularly transition metal-catalyzed organic transformations. Our research addresses the experimental–theoretical synergy and provides ideas and insights that will aid in the work of experimentalists.
+
+Why is catalysis of organics by transition metals so interesting?  I do not know.  I should ask Aaron.
+
+
+= Haobin Wang (CU Denver, Chemistry, department chair)
+Haobin Wang seems to focus on electron mobility in systems with strong electron-electron interactions.  Like others in the CU Denver chemistry department, his papers are split between the development of new methods and the application of these new methods.  Several of his application-type papers compare results to experimental data.  His papers are wonderfully mathy.
+
+Haobin looks at slightly more esoteric systems - for example, quantum dots at absolute zero (https://arxiv.org/abs/1508.07793)!
