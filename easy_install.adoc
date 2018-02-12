@@ -1,0 +1,30 @@
+There are several programs within CDMS that you may end up needing to install - and depending on your expertise and system, all of them can be time-consuming projects.  The programs I've needed to install most commonly are:
+
+1. cdmsbats
+2. the DAQ (which depends on cdmsbats, among other things)
+
+One of the pain points of the cdmsbats install is ROOT, which must be version 5, be (successfully!) compiled with libfftw, and be compiled with python bindings enabled.
+
+Ideally, there'd be a very easy way to install the DAQ.  But a good (and smaller) place to start is finding a push-button install method for the particular version of ROOT we need.
+
+
+### ROOT via cmake #########
+Here is the link to the ROOT install instructions: https://root.cern.ch/building-root.  I recommend starting with the current release version (6.x?).  ROOT uses cmake to build (most CDMS programs use the older make).  Still, it's a nice real-world example of code producing executables.  
+
+
+### ROOT via Nix #########
+Installing ROOT isn't so bad (at least the newer version), but we need an older version with specific options enabled and it's got some sandtraps.  Nix (https://nixos.org/nix/) is a package manager that makes a strong promise: it will only build your package once you've specified *all* the dependencies.  But now you've fully specified all the dependencies, and the resulting "Nix expression" you've created allows others to install your software on their machines with zero (?) chance of failure.
+
+
+You can see all the official Nix expressions at https://github.com/NixOS/nixpkgs/tree/master/pkgs; the ROOT Nix expression is at https://github.com/NixOS/nixpkgs/tree/master/pkgs/applications/science/misc/root.
+
+
+### Skip the install all together #########
+There are a number of utilities that are intended to let people install a program once and then share that program (via drive sharing) to other computers.  The ones I know of are
+
+
+    CernVM Filesystem (http://cernvm.cern.ch/portal/filesystem)
+    Parrot (http://ccl.cse.nd.edu/software/)
+
+
+I'm particularly intrigued by Parrot as it looks easy to install.  One thing you'll notice is that installing ROOT and Nix are super easy - if you have admin privileges.  Sadly, we're restricted to "local installs" - installs where you never use elevated privileges - on quite a few machines. 

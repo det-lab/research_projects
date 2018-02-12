@@ -1,0 +1,12 @@
+= Just getting started?  Here's some reading that may be helpful.
+
+== Electrons and holes in semiconductors
+
+An excellent MITOpenCourseware course that bridges microscopic to macroscopic: https://ocw.mit.edu/courses/mechanical-engineering/2-57-nano-to-macro-transport-processes-spring-2012/index.htm.  In particular, the lecture notes starting at lecture 5 discuss the electronic structure of cyrstals.  For phonons, see Lecture 7.
+
+The Feynman lectures: http://www.feynmanlectures.caltech.edu/III_13.html, http://www.feynmanlectures.caltech.edu/III_14.html
+
+Introductory lecture notes: http://www.physics.mcgill.ca/~hilke/SSP_Hilke.pdf
+
+The Oxford Solid State Basics: A readable, introductory textbook.   ISBN-10: 0199680779 
+
