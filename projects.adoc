@@ -112,3 +112,10 @@ Miscellany
 * how we process the data now is fine but what if we could do it better!?: measure the speed of the algorithms we use to process CDMS data; adapt them for use on a GPU
 * why so slow, mhttpd: one of the core pieces of our DAQ software is sometimes incredibly slow.  Find out why, and fix it.
 * Make it easier to process CDMS data: Develop a Nix expression that will install the version of ROOT needed by CDMS software.    
+* write tests for the CDMS optimal-interval code/do sanity checks
+
+* Want to be able to write MIDAS-format data files independent of the MIDAS DAQ  
+** Could update and try for a pull request: midasio.cxx, midasio.h in rootana/libMidasInterface/ (https://bitbucket.org/tmidas/rootana/src/bd5c53afa728a4c838095d73f8c53af29d50616d/libMidasInterface/?at=master).  However, the DAQ group consensus is that we will implement file reading/writing in the dataio library.  Ben Smith is working on this.
+** cdmsbats' responsibility to map dataio structure to its data structure
+** need a map from TES channel name to channel number.  Anthony: this map is used primarily in analysis and will likely stay in cdmsbats.  Matt: I need to think about this because the DMC uses channel names, not numbers.  
+** also need to consider adding a write_odb() function for the dataio library.  Ben Smith is looking into this.

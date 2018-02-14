@@ -1,0 +1,5 @@
+= all the computers are the same when you login
+Goal: nobody has assigned computers, and switching computers does not negatively impact their ability to work in any way.
+Possible implementation: Set up a linux cluster with a networked file system or Windows computers running the "Microsoft user experience virtualization" with an associated server.
+
+* https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/uev-v2/index
