@@ -103,6 +103,10 @@ This analysis is likely to be really fun at first - you'd spend a lot of time lo
 
 If calibration sounds interesting to you but you're not keen on bitter disappointment, let me know and I can fill you in on some alternative calibration projects that, while not as signal-oriented as this one, aren't null-result territory.
 
+Data without pain
+-----------------
+Currently it's a pretty tough process to simply look at CDMS data - both raw and processed.  Can we make a python library that makes it easy to load raw and processed data?  I'm imagining something like a raw-data server that, given an HTTP request, will return event data (or an array of event data).  BatViewer already essentially does this, it's just that it needs to be invoked on the command line and the thing it returns is a file with ROOT histograms.  We'd need to add an output format option (JSON/BSON/whatever as long as there are plenty of python libraries that can decode it) and set up a server to invoke the executable and return the data produced.  And then we'd want to write a python library that's a wrapper for the HTTP requests.  
+
 
 Miscellany
 ----------
