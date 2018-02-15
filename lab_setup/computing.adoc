@@ -1,5 +1,24 @@
 = all the computers are the same when you login
 Goal: nobody has assigned computers, and switching computers does not negatively impact their ability to work in any way.
-Possible implementation: Set up a linux cluster with a networked file system or Windows computers running the "Microsoft user experience virtualization" with an associated server.
+Possible implementation: 
 
+linux cluster with a networked file system::
+* https://gricad.github.io/calcul/nix/hpc/2017/05/15/nix-on-hpc-platforms.html
+* https://gricad.univ-grenoble-alpes.fr/sites/gricad/files/Mediatheque/Documents/Calcul/CIMENT_2016-06-23/4b-2016-06-23-nix.pdf
+
+Windows computers running the "Microsoft user experience virtualization" with an associated server::
 * https://docs.microsoft.com/en-us/microsoft-desktop-optimization-pack/uev-v2/index
+* OIT has an enterprise team, they might be able to help
+
+_Someone_ on campus must have a linux cluster I can plug into::
+* ask Thomas Augustine?
+* math?
+* engineering?
+* ask our local IT person, Mark Hendricks?
+** Mark may be able to connect me to Joe, the IT person in math
+
+
+= getting a Metro student a CU Denver account
+* call IT and ask: is getting a Metro student a POI number the right thing to do to get them a computer account?
+* talk to Dawn to get a POI (person of interest) number
+
