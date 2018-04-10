@@ -5,8 +5,8 @@ We'd all love an atomic-scale theory of how energy deposition is partitioned int
 Some of the folks at LBNL and also England are making inroads by stitching together DFT methods with ... other, faster methods.  We should work with them, apply the methods to our detectors, and compare to measured calibration data!
 
 
-Modeling matter: first steps
-----------------------------
+Modeling matter: first steps (Jonathan currently working on this)
+-----------------------------------------------------------------
 Historically, when we imagine a dark matter particle interacting in our detector, we pretend like the nucleus is a free particle floating in a vacuum.  This is a really good approximation if the energy transfer is large (say, 1 keV) because the scale of atomic binding energy is on the order of 10 eV.  But the dark matter community wants more sensitive experiments and drives hard to look at smaller and smaller energy transfers (CDMS recently published a paper that looked at energy transfers as small as 56 eV).  And it turns out we don't really understand energy transfer at these low-energy scales.
 
 So that's exciting!
@@ -27,8 +27,8 @@ We have good ways of doing this, but I wonder if we could do even better by usin
 This is a fun, highly math-oriented project that would involve lots of looking at original data, comparing to current algorithms, and thinking about the maximum amount of information we can get out of our signals.
 
 
-Was that two hits or one? (Parker Pyle currently working on this)
------------------------------------------------------------------
+Was that two hits or one? (Parker currently working on this)
+------------------------------------------------------------
 Surprisingly, calibrating the energy scale of our detectors is a real challenge.  Lots of standard calibration sources emit gammas or betas and these predominantly interact with the *electrons* in our detectors.  But we expect dark matter to overwhelmingly interact with the *nuclei* in our detectors.  
 
 So ... what can we use to calibrate energy transfers to nuclei in our detectors?  Neutrons!
@@ -40,6 +40,15 @@ I've actually got several projects related to this, but the one that immediately
 This analysis is likely to be really fun at first - you'd spend a lot of time looking directly at detector signals and thinking about the physics that creates them.  But identifying events with multiple interactions is not gauranteed to be possible.  So the result of this analysis could well be "it would be super awesome to be able to distinguish multiple-interaction events but I have conclusively shown that this is not possible with CDMS detectors".  
 
 If calibration sounds interesting to you but you're not keen on bitter disappointment, let me know and I can fill you in on some alternative calibration projects that, while not as signal-oriented as this one, aren't null-result territory.
+
+
+Reproducible research
+---------------------
+Making the same plot someone else has already made can be shockingly difficult.  But it's incredibly important.  What if we made a mistake?  What if someone has a question about how we did the analysis - can we answer their question?
+
+The position of "reproducibility resident" is currently available in my lab.  In this position, you won't have your own project - instead, you'll work with others in the lab and try to reproduce their plots or measurements.  Both you and the primary analyzer will work to improve the documentation and the analysis code so that the next time someone needs to look at that analysis, it's easy.  
+
+This position is an internship position and is intended to help you learn the skills you need for work in my lab while providing a valuable perspective on documentation and scientific workflow.  The intent is that after one or two semesters in this position you'd rotate out to your own research project.
 
 
 Miscellany
