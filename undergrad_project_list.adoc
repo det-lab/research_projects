@@ -27,8 +27,8 @@ We have good ways of doing this, but I wonder if we could do even better by usin
 This is a fun, highly math-oriented project that would involve lots of looking at original data, comparing to current algorithms, and thinking about the maximum amount of information we can get out of our signals.
 
 
-Was that two hits or one? (Parker currently working on this)
-------------------------------------------------------------
+Was that two hits or one? (Ashley at UBC may be looking at this)
+----------------------------------------------------------------
 Surprisingly, calibrating the energy scale of our detectors is a real challenge.  Lots of standard calibration sources emit gammas or betas and these predominantly interact with the *electrons* in our detectors.  But we expect dark matter to overwhelmingly interact with the *nuclei* in our detectors.  
 
 So ... what can we use to calibrate energy transfers to nuclei in our detectors?  Neutrons!
